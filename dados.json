@@ -1,0 +1,14 @@
+{
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "Tubaroes",
+      "genero": "Ação",
+      "ano": "2017",
+      "disponivel": true
+    }
+  ],
+  "clientes": [],
+  "alugueis": [],
+  "vendas": []
+}
