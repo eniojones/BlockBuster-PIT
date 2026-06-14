@@ -3,7 +3,6 @@ from clientes import listar_clientes, criar_cliente, atualizar_cliente, deletar_
 from alugueis import listar_alugueis, registrar_aluguel, registrar_devolucao
 from vendas   import listar_vendas, registrar_venda
 
-# Função genérica que exibe qualquer menu e executa a opção escolhida
 def executar_menu(titulo, opcoes):
     while True:
         print(f"\n===== {titulo} =====")
@@ -15,7 +14,7 @@ def executar_menu(titulo, opcoes):
         if escolha == "0":
             break
         elif escolha in opcoes:
-            opcoes[escolha][1]()  # Chama a função da opção escolhida
+            opcoes[escolha][1]()
         else:
             print("Opção inválida.")
 
@@ -53,7 +52,6 @@ def menu_vendas():
     })
 
 def main():
-    # Dicionário que mapeia cada opção ao seu menu
     menus = {
         "1": menu_filmes,
         "2": menu_clientes,
@@ -63,7 +61,7 @@ def main():
 
     while True:
         print("\n╔══════════════════════════╗")
-        print("║     🎬 LOCADORA PYTHON   ║")
+        print("║     LOCADORA PYTHON      ║")
         print("╠══════════════════════════╣")
         print("║  [1] Filmes              ║")
         print("║  [2] Clientes            ║")
@@ -75,13 +73,12 @@ def main():
         escolha = input("\nEscolha: ").strip()
 
         if escolha == "0":
-            print("\nAté logo! 👋")
+            print("\nAté logo!")
             break
         elif escolha in menus:
-            menus[escolha]()  # Chama o menu correspondente
+            menus[escolha]()
         else:
             print("Opção inválida.")
 
-# Ponto de entrada do programa
 if __name__ == "__main__":
     main()

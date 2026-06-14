@@ -1,10 +1,10 @@
-# 🎬 Locadora Blockbuster — Python
+# Locadora Blockbuster — Python
 
 Projeto desenvolvido para a disciplina de **Algoritmos e Programação** do 1º período do curso de **Bacharelado em Inteligência Artificial** do Piauí Instituto de Tecnologia (PIT).
 
 ---
 
-## 📋 Descrição do Projeto
+## Descrição do Projeto
 
 O sistema tem como objetivo realizar o **gerenciamento de uma locadora de filmes**, permitindo o armazenamento permanente dos dados por meio de arquivos JSON.
 
@@ -12,7 +12,7 @@ O software implementa um **CRUD completo** (Create, Read, Update e Delete) utili
 
 ---
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 - **Filmes:** cadastrar, listar, atualizar e remover filmes do catálogo
 - **Clientes:** cadastrar, listar, atualizar e remover clientes
@@ -22,7 +22,7 @@ O software implementa um **CRUD completo** (Create, Read, Update e Delete) utili
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Linguagem:** Python 3
 - **Biblioteca `json`:** nativa do Python, usada para serialização e persistência de dados
@@ -30,7 +30,7 @@ O software implementa um **CRUD completo** (Create, Read, Update e Delete) utili
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 Blockbuster/
@@ -48,7 +48,7 @@ O sistema foi organizado de forma **modular** para facilitar a manutenção e a 
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 ```bash
 python main.py
@@ -58,13 +58,13 @@ python main.py
 
 ---
 
-## 🔧 Técnicas e Conceitos Aplicados
+## Técnicas e Conceitos Aplicados
 
 Abaixo estão todos os conceitos de Python utilizados no projeto, com exemplos de código, links para a documentação oficial e vídeos explicativos no YouTube.
 
 ---
 
-### 1. 🔁 Princípio DRY — Não Repita Código
+### 1. Princípio DRY — Não Repita Código
 
 **O que é:**
 DRY significa *Don't Repeat Yourself* (Não Se Repita). Sempre que um trecho de código se repete em vários lugares, ele deve virar uma função reutilizável. Isso torna o código mais fácil de manter e corrigir.
@@ -81,18 +81,18 @@ def novo_id(lista):
     return max((item["id"] for item in lista), default=0) + 1
 ```
 
-📖 **Documentação Python — Funções:**
+**Documentação Python — Funções:**
 https://docs.python.org/pt-br/3/tutorial/functions.html
 
-🎥 **Vídeo — Funções em Python (def, parâmetros e retorno):**
+**Vídeo — Funções em Python (def, parâmetros e retorno):**
 https://www.youtube.com/watch?v=CSWx1Mr2xms
 
-🎥 **Vídeo — Como criar funções em Python (iniciantes):**
+**Vídeo — Como criar funções em Python (iniciantes):**
 https://www.youtube.com/watch?v=mb5OeMveUzg
 
 ---
 
-### 2. 🔍 Função `next()` com Generator Expression
+### 2. Função `next()` com Generator Expression
 
 **O que é:**
 `next()` percorre uma lista e retorna o **primeiro item** que satisfaz uma condição, sem precisar de um `for` com `if` aninhado. O segundo parâmetro (`None`) é o valor retornado caso nenhum item seja encontrado.
@@ -109,18 +109,18 @@ for c in dados["clientes"]:
 cliente = next((c for c in dados["clientes"] if c["id"] == id_alvo), None)
 ```
 
-📖 **Documentação Python — `next()`:**
+**Documentação Python — `next()`:**
 https://docs.python.org/pt-br/3/library/functions.html#next
 
-📖 **Documentação Python — Expressões Geradoras:**
+**Documentação Python — Expressões Geradoras:**
 https://docs.python.org/pt-br/3/tutorial/classes.html#generator-expressions
 
-🎥 **Vídeo — List Comprehension e Generator Expressions (PT-BR):**
+**Vídeo — List Comprehension e Generator Expressions (PT-BR):**
 https://www.youtube.com/watch?v=ElX6dOSd1xw
 
 ---
 
-### 3. 📋 List Comprehension — Filtrar Listas
+### 3. List Comprehension — Filtrar Listas
 
 **O que é:**
 List Comprehension é uma forma compacta de criar uma nova lista filtrando ou transformando os itens de outra lista, em uma única linha. É amplamente usada em Python por ser mais legível e eficiente que o `for` tradicional.
@@ -140,18 +140,18 @@ dados["clientes"] = clientes_novos
 dados["clientes"] = [c for c in original if c["id"] != id_alvo]
 ```
 
-📖 **Documentação Python — List Comprehension:**
+**Documentação Python — List Comprehension:**
 https://docs.python.org/pt-br/3/tutorial/datastructures.html#list-comprehensions
 
-🎥 **Vídeo — O que é List Comprehension? (PT-BR):**
+**Vídeo — O que é List Comprehension? (PT-BR):**
 https://www.youtube.com/watch?v=ElX6dOSd1xw
 
-🎥 **Vídeo — List Comprehension no Python (Hashtag Treinamentos):**
+**Vídeo — List Comprehension no Python (Hashtag Treinamentos):**
 https://www.youtube.com/watch?v=M2zL6LnQwkw
 
 ---
 
-### 4. 🖨️ f-strings — Formatação de Texto
+### 4. f-strings — Formatação de Texto
 
 **O que é:**
 f-strings permitem inserir variáveis diretamente dentro de textos de forma simples e legível. O `:< 25` define o alinhamento à esquerda e reserva 25 caracteres de espaço, garantindo que as tabelas fiquem alinhadas.
@@ -168,18 +168,18 @@ disponivel = "Sim" if f["disponivel"] else "Não"
 print(f'{f["id"]:<5} {f["titulo"]:<25} {disponivel}')
 ```
 
-📖 **Documentação Python — f-strings:**
+**Documentação Python — f-strings:**
 https://docs.python.org/pt-br/3/tutorial/inputoutput.html#formatted-string-literals
 
-🎥 **Vídeo — Como usar f-strings em Python:**
+**Vídeo — Como usar f-strings em Python:**
 https://www.youtube.com/watch?v=x-UsB5PzsX4
 
-🎥 **Vídeo — F-strings: a melhor forma de formatar strings:**
+**Vídeo — F-strings: a melhor forma de formatar strings:**
 https://www.youtube.com/watch?v=zjOoUkU-WjM
 
 ---
 
-### 5. 🛡️ `try / except` — Tratamento de Erros
+### 5. `try / except` — Tratamento de Erros
 
 **O que é:**
 `try / except` evita que o programa encerre inesperadamente quando o usuário digita algo inválido (como letras no lugar de números). O `ValueError` é o tipo de erro lançado quando uma conversão de tipo falha.
@@ -195,18 +195,18 @@ except ValueError:
     return
 ```
 
-📖 **Documentação Python — Tratamento de Exceções:**
+**Documentação Python — Tratamento de Exceções:**
 https://docs.python.org/pt-br/3/tutorial/errors.html#handling-exceptions
 
-🎥 **Vídeo — Try Except — Tratamento de Erros - Curso Python #26:**
+**Vídeo — Try Except — Tratamento de Erros - Curso Python #26:**
 https://www.youtube.com/watch?v=jT-C3OjUBvQ
 
-🎥 **Vídeo — Try e Except no Python (Hashtag Treinamentos):**
+**Vídeo — Try e Except no Python (Hashtag Treinamentos):**
 https://www.youtube.com/watch?v=h01u7A3lWZY
 
 ---
 
-### 6. 📦 Dicionários como Dispatcher — Menu
+### 6. Dicionários como Dispatcher — Menu
 
 **O que é:**
 Em vez de vários `elif` para cada opção do menu, usamos um dicionário onde cada chave é uma opção e o valor é a função a ser chamada. Isso torna o código mais limpo e fácil de expandir.
@@ -227,15 +227,15 @@ if escolha in menus:
     menus[escolha]()
 ```
 
-📖 **Documentação Python — Dicionários:**
+**Documentação Python — Dicionários:**
 https://docs.python.org/pt-br/3/tutorial/datastructures.html#dictionaries
 
-🎥 **Vídeo — Dicionários em Python (Hashtag Treinamentos):**
+**Vídeo — Dicionários em Python (Hashtag Treinamentos):**
 https://www.youtube.com/watch?v=M2zL6LnQwkw
 
 ---
 
-### 7. 📂 `max()` com `default` — Geração de ID Automático
+### 7. `max()` com `default` — Geração de ID Automático
 
 **O que é:**
 `max()` retorna o maior valor de uma lista. O parâmetro `default=0` evita erro quando a lista está vazia (nenhum item cadastrado ainda), retornando `0` como valor padrão, e então somamos `+1` para gerar o próximo ID.
@@ -247,12 +247,12 @@ def novo_id(lista):
     return max((item["id"] for item in lista), default=0) + 1
 ```
 
-📖 **Documentação Python — `max()`:**
+**Documentação Python — `max()`:**
 https://docs.python.org/pt-br/3/library/functions.html#max
 
 ---
 
-### 8. 📅 `date.today()` — Data Automática
+### 8. `date.today()` — Data Automática
 
 **O que é:**
 `date.today()` do módulo `datetime` retorna a data atual do sistema automaticamente, sem precisar que o usuário a informe manualmente.
@@ -267,12 +267,12 @@ aluguel = {
 }
 ```
 
-📖 **Documentação Python — `datetime.date`:**
+**Documentação Python — `datetime.date`:**
 https://docs.python.org/pt-br/3/library/datetime.html#datetime.date.today
 
 ---
 
-## 🚧 Desafios Encontrados
+## Desafios Encontrados
 
 Durante o desenvolvimento, os principais desafios foram:
 
@@ -283,25 +283,25 @@ Durante o desenvolvimento, os principais desafios foram:
 
 ---
 
-## 🤖 Uso de Inteligência Artificial
+## Uso de Inteligência Artificial
 
 A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento do projeto, auxiliando em:
 
-1. Estruturação da arquitetura modular do sistema, separando as responsabilidades entre os arquivos do projeto
+1. Geração de comentários explicativos no código para facilitar o entendimento
 2. Identificação e correção de bugs nas f-strings e nas chaves dos dicionários
-3. Aplicação de boas práticas de programação, incluindo o princípio DRY e tratamento de erros com `try / except`
-4. Simplificação do código com técnicas como `next()`, List Comprehension e dicionários como dispatcher
-5. Geração de comentários explicativos no código para facilitar o entendimento
+
 
 ---
 
-## 👥 Equipe
+## Equipe
 
-- Jones
+- Enio Jones Porto
+- Ana Catharina
+- Wellison Samuel
 
 ---
 
-## 📚 Materiais da Disciplina (PIT)
+## Materiais da Disciplina (PIT)
 
 - Fundamentos de Lógica e Python
 - Estruturas Condicionais
@@ -314,26 +314,26 @@ A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvim
 
 ---
 
-## 🔗 Referências Técnicas
+## Referências Técnicas
 
 | Tema | Documentação Oficial | Vídeo YouTube |
 |---|---|---|
-| Funções (`def`) | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/functions.html) | [▶️ Funções em Python](https://www.youtube.com/watch?v=CSWx1Mr2xms) |
-| List Comprehension | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/datastructures.html#list-comprehensions) | [▶️ List Comprehension](https://www.youtube.com/watch?v=ElX6dOSd1xw) |
-| `next()` | [docs.python.org](https://docs.python.org/pt-br/3/library/functions.html#next) | [▶️ List Comprehension](https://www.youtube.com/watch?v=ElX6dOSd1xw) |
-| f-strings | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/inputoutput.html#formatted-string-literals) | [▶️ f-strings em Python](https://www.youtube.com/watch?v=x-UsB5PzsX4) |
-| `try / except` | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/errors.html) | [▶️ Try e Except](https://www.youtube.com/watch?v=jT-C3OjUBvQ) |
-| Dicionários | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/datastructures.html#dictionaries) | [▶️ Dicionários](https://www.youtube.com/watch?v=M2zL6LnQwkw) |
+| Funções (`def`) | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/functions.html) | [Funções em Python](https://www.youtube.com/watch?v=CSWx1Mr2xms) |
+| List Comprehension | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/datastructures.html#list-comprehensions) | [List Comprehension](https://www.youtube.com/watch?v=ElX6dOSd1xw) |
+| `next()` | [docs.python.org](https://docs.python.org/pt-br/3/library/functions.html#next) | [List Comprehension](https://www.youtube.com/watch?v=ElX6dOSd1xw) |
+| f-strings | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/inputoutput.html#formatted-string-literals) | [f-strings em Python](https://www.youtube.com/watch?v=x-UsB5PzsX4) |
+| `try / except` | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/errors.html) | [Try e Except](https://www.youtube.com/watch?v=jT-C3OjUBvQ) |
+| Dicionários | [docs.python.org](https://docs.python.org/pt-br/3/tutorial/datastructures.html#dictionaries) | [Dicionários](https://www.youtube.com/watch?v=M2zL6LnQwkw) |
 | `max()` | [docs.python.org](https://docs.python.org/pt-br/3/library/functions.html#max) | — |
 | `datetime` | [docs.python.org](https://docs.python.org/pt-br/3/library/datetime.html) | — |
-| Princípio DRY | [Alura Língua](https://www.aluralingua.com.br/artigos/voce-conhece-o-principio-dry-em-programacao) | [▶️ Funções em Python](https://www.youtube.com/watch?v=CSWx1Mr2xms) |
-| JSON em Python | [docs.python.org](https://docs.python.org/pt-br/3/library/json.html) | [▶️ Formatação de Strings](https://www.youtube.com/watch?v=x-UsB5PzsX4) |
+| Princípio DRY | [Alura Língua](https://www.aluralingua.com.br/artigos/voce-conhece-o-principio-dry-em-programacao) | [Funções em Python](https://www.youtube.com/watch?v=CSWx1Mr2xms) |
+| JSON em Python | [docs.python.org](https://docs.python.org/pt-br/3/library/json.html) | [Formatação de Strings](https://www.youtube.com/watch?v=x-UsB5PzsX4) |
 
 ---
 
-## 🌐 Documentação Oficial Python (Português)
+## Documentação Oficial Python (Português)
 
-👉 https://docs.python.org/pt-br/3/
+https://docs.python.org/pt-br/3/
 
 ---
 

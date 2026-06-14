@@ -16,21 +16,18 @@ def registrar_venda():
         id_cliente = int(input("ID do cliente: "))
         valor      = float(input("Valor da venda (R$): "))
     except ValueError:
-        print("❌ Entrada inválida."); return
+        print("Entrada inválida."); return
 
-    # Busca o filme e o cliente pelo ID
     filme   = buscar_por_id(dados["filmes"], id_filme)
     cliente = buscar_por_id(dados["clientes"], id_cliente)
 
-    # Validações
     if not filme:
-        print("❌ Filme não encontrado."); return
+        print("Filme não encontrado."); return
     if not filme["disponivel"]:
-        print("❌ Filme indisponível para venda."); return
+        print("Filme indisponível para venda."); return
     if not cliente:
-        print("❌ Cliente não encontrado."); return
+        print("Cliente não encontrado."); return
 
-    # Registra a venda
     venda = {
         "id": novo_id(dados["vendas"]),
         "id_filme": id_filme,
@@ -42,21 +39,19 @@ def registrar_venda():
     }
     dados["vendas"].append(venda)
 
-    # Filme vendido sai do catálogo
     filme["disponivel"] = False
 
     salvar(dados)
-    print(f'\n✅ Venda #{venda["id"]} registrada! "{filme["titulo"]}" vendido para {cliente["nome"]}.')
+    print(f'\nVenda #{venda["id"]} registrada! "{filme["titulo"]}" vendido para {cliente["nome"]}.')
 
 def listar_vendas():
     dados  = carregar()
     vendas = dados["vendas"]
 
     if not vendas:
-        print("\n⚠️  Nenhuma venda registrada.")
+        print("\nNenhuma venda registrada.")
         return
 
-    # Cabeçalho da tabela
     print(f'\n{"ID":<5} {"Filme":<25} {"Cliente":<20} {"Data":<12} {"Valor"}')
     print("-" * 70)
 
